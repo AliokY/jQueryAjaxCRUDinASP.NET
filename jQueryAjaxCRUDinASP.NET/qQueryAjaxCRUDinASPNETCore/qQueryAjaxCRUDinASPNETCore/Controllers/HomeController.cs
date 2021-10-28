@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using qQueryAjaxCRUDinASPNETCore.Models;
+using jQueryAjaxCRUDinASPNETCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace qQueryAjaxCRUDinASPNETCore.Controllers
+namespace jQueryAjaxCRUDinASPNETCore.Controllers
 {
     public class HomeController : Controller
     {

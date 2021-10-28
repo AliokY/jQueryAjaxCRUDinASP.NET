@@ -1,6 +1,6 @@
 using System;
 
-namespace qQueryAjaxCRUDinASPNETCore.Models
+namespace jQueryAjaxCRUDinASPNETCore.Models
 {
     public class ErrorViewModel
     {

@@ -4,12 +4,14 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using jQueryAjaxCRUDinASPNETCore.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
-namespace qQueryAjaxCRUDinASPNETCore
+namespace jQueryAjaxCRUDinASPNETCore
 {
     public class Startup
     {
@@ -24,6 +26,9 @@ namespace qQueryAjaxCRUDinASPNETCore
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddDbContext<TransactionDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -32,6 +37,7 @@ namespace qQueryAjaxCRUDinASPNETCore
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
             }
             else
             {
@@ -50,7 +56,7 @@ namespace qQueryAjaxCRUDinASPNETCore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Transaction}/{action=Index}/{id?}");
             });
         }
     }
