@@ -14,9 +14,9 @@ showInPopup = (url, title) => {
             $('#form-modal .modal-title').html(title);
             $('#form-modal').modal('show');
             // to make popup draggable
-            $('.modal-dialog').draggable({
-                handle: ".modal-header"
-            });
+            //$('.modal-dialog').draggable({
+            //    handle: ".modal-header"
+            //});
         }
     })
 }
