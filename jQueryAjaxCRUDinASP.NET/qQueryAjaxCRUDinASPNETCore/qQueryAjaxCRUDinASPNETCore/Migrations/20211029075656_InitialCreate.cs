@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace jQueryAjaxCRUDinASPNETCore.Migrations
 {
@@ -16,7 +17,8 @@ namespace jQueryAjaxCRUDinASPNETCore.Migrations
                     BeneficiaryName = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     BankName = table.Column<string>(type: "nvarchar(100)", nullable: true),
                     SWIFTCode = table.Column<string>(type: "nvarchar(11)", nullable: true),
-                    Account = table.Column<int>(nullable: false)
+                    Amount = table.Column<int>(nullable: false),
+                    Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
